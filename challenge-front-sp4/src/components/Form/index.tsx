@@ -18,6 +18,8 @@ const Formulario:React.FC = () => {
                     <input type="number" max={numberAnoAtual} min="1910" />
                     <label htmlFor="carModel">Modelo do veículo: </label>
                     <input type="text" id="carModel"/>
+                    <label htmlFor="carModel">Placa do Veiculo: </label>
+                    <input type="text" id="carModel"/>
                 </div>
                 <div className={style.form2}>
                     <label htmlFor="foto_painel">Anexe a foto do painel de seu carro</label>
