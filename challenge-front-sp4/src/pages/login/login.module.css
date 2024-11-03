@@ -15,7 +15,7 @@
     background-color: #fff;
     border-radius: 15px;
     width: 960px;
-    height: 50%;
+    height: 70%;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -98,6 +98,8 @@
     z-index: 10;
 }
 .first_column img{
+    max-width: 150px;
+    max-height: 130px;
     width: 15vw;
 }
 .second_column {

@@ -27,11 +27,11 @@ const Header: React.FC = () => {
           className={`${styles.menuLat} ${menuOpen ? styles.slideIn : styles.slideOut}`}
           id="menuLat"
         >
-          <img src={x} alt="Fechar menu" id="fecha_menu" onClick={handleCloseMenu} />
+          <Image src={x} alt="Fechar menu" onClick={handleCloseMenu}/>
           <ul>
             <li className={styles.opc2} id="opc2">
               <Image src={chip_branco} alt="" id={styles.icon} />
-              <Link href="/" onClick={handleCloseMenu} ><p>Home</p></Link>
+              <Link href="/home" onClick={handleCloseMenu} ><p>Home</p></Link>
             </li>
             <li className={styles.opc2} id="opc2">
               <Image src={chip_branco} alt="" id={styles.icon} />
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
             </li>
             <li className={styles.opc2} id="opc2">
               <Image src={chip_branco} alt="" id={styles.icon} />
-              <Link href="/login" onClick={handleCloseMenu} >Login</Link>
+              <Link href="/" onClick={handleCloseMenu} >Login</Link>
             </li>
           </ul>
         </div>
@@ -49,35 +49,34 @@ const Header: React.FC = () => {
               <Image src={menu_hamb} alt="Menu" />
             </li>
             <li>
-              <Link href="/">
+              <Link href="/home">
                 <Image id={styles.logo} src={lg_letra_branca} alt="" />
               </Link>
             </li>
             <li className={styles.opc}>
               <Image src={chip_branco} alt="" id={styles.icon} />
-              <img src="../../../public/Img/chip_branco.svg" alt="" id={styles.icon} />
               <Link href="/aboutUs"><p>Sobre Nós</p></Link>
             </li>
             <a href="#mapa">
               <li className={styles.opc}>
                 <Image src={chip_branco} alt="" id={styles.icon} />
-                <img src="../../../public/Img/chip_branco.svg" alt="" id={styles.icon} />
                 <p>Oficinas da Região</p>
               </li>
             </a>
             <a href="#infoProblem">
               <li className={styles.opc}>
                 <Image src={chip_branco} alt="" id={styles.icon} />
-                <img src="../../../public/Img/chip_branco.svg" alt="" id={styles.icon} />
                 <p>Informar Problema</p>
               </li>
             </a>
-            <Link href="/login">
+            <Link href="/">
               <li className={styles.login}>Login</li>
             </Link>
-            <li>
-              <Image src={user} alt="" id={styles.profile} />
-            </li>
+            <Link href="/user">
+              <li>
+                <Image src={user} alt="" id={styles.profile} />
+              </li>
+            </Link>
           </ul>
         </nav>
       </header>

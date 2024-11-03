@@ -5,12 +5,16 @@ import Image from 'next/image';
 
 import lg_letras_azuis from "../../../public/Img/logo_letra_azul.png"
 import favicon_chip from "../../../public/Img/favicon_chip.svg"
+import linkedin from "../../../public/Img/linkedin.svg"
+import instagram from "../../../public/Img/instagram.svg"
+import gmail from "../../../public/Img/gmail.svg"
+import facebook from "../../../public/Img/facebook.svg"
 
 const Footer : React.FC = () => {
     return (
         <>
         <footer className={styles.footer}>
-            <Link href="/">
+            <Link href="/home">
                 <Image src={lg_letras_azuis} alt="Logo das letras azuis"/>
             </Link>
             <div className={styles.contatos}>
@@ -29,15 +33,17 @@ const Footer : React.FC = () => {
                     </li>
                 </ul>
                 <ul className={styles.contact}>
-                    <li><img src="../../../public/Img/linkedin.svg" alt="" /></li>
                     <li>
-                        <img src="../../../public/Img/gmail.svg" alt="" />
+                        <Image src={linkedin} alt="Linkedin"/>
                     </li>
                     <li>
-                        <img src="../../../public/Img/facebook.svg" alt="" />
+                        <Image src={gmail} alt="Gmail"/>
                     </li>
                     <li>
-                        <img src="../../../public/Img/instagram.svg" alt="" />
+                        <Image src={facebook} alt="Facebook"/>
+                    </li>
+                    <li>
+                        <Image src={instagram} alt="Instagram"/>
                     </li>
                 </ul>
             </div>

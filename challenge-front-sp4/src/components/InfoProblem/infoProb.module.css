@@ -25,6 +25,7 @@
 }
 .text p a img {
     max-width: 34px;
+    max-height: 34px;
 }
 .text a button {
     border: none;
