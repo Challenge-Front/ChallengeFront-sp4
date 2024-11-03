@@ -1,0 +1,138 @@
+.header{
+    top: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #01A1FD;
+    font-family: "Exo 2", sans-serif;
+}
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    color: white;
+    margin: 0;
+}
+.nav ul a {
+    color: white;
+    text-decoration: none;
+}
+#logo {
+    max-height: 130px;
+    max-width: 150px;
+}
+#profile{
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+.opc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 180px;
+    gap: 10px;
+}
+.opc p{
+    border-bottom: 1px solid white;
+}
+#icon{
+    max-height: 25px;
+    max-width: 25px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.opc:hover #icon{
+    opacity: 1;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menuHamb {
+    max-width: 25px;
+    display: none;
+}
+.menuHamb img:hover {
+    cursor: pointer;
+}
+.menuLat {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #01A1FD;
+    right: -100%;
+    opacity: 0;
+}
+.menuLat img {
+    width: 50px;
+    margin: 20px;
+}
+.slideIn {
+    animation: slideIn 2s ease-in-out;
+    right: 0;
+}
+.slideOut {
+    animation: slideOut 2s ease-in-out;
+    right: -100%;
+}
+.menuLat ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    padding: 20% 0px 0px 30px;
+}
+.opc2{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    color: #fff;
+    font-size: 28px;
+}
+.opc2 a {
+    text-decoration: none;
+    color: #fff;
+}
+.opc2:hover #icon {
+    opacity: 1;
+}
+.login {
+    background-color: #fff;
+    color: #01A1FD;
+    padding: 10px;
+    border-radius: 8px;
+}
+@media only screen and (max-width: 780px){
+    .opc {
+        display: none;
+    }
+    .menuHamb {
+        display: block;
+    }
+    .menuLat{
+        opacity: 1;
+    }
+}
+@keyframes slideIn {
+    from {
+        right: -100%;
+    } to {
+        right: 0
+    }
+}
+@keyframes slideOut {
+    from {
+        right: 0;
+    } to {
+        right: -100%;
+    }
+}

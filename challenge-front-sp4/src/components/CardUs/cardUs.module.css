@@ -1,0 +1,44 @@
+.card {
+    border: solid 1px #01a1fd;
+    border-radius: 10px;
+    max-width: 300px;
+    padding: 22px 50px 22px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-sizing: border-box;
+}
+.card img {
+    border-radius: 50%;
+    max-width: 200px;
+    max-height: 200px;
+}
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    gap: 10px;
+}
+.social a img {
+    max-width: 30px;
+    max-height: 30px;
+    transition: padding 0.5s;
+}
+.social a img:hover {
+    border: 1px solid #01a1fd;
+    padding: 5px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media only screen and (max-width: 350px){
+    .card{
+        border-bottom: #01a1fd solid 1px;
+        width: 100%;
+    }
+}

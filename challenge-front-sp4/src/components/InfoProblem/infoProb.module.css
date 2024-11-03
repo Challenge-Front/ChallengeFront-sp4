@@ -1,0 +1,59 @@
+.ip {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #01a1fd;
+    width: 100%;
+    height: 500px;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 0px 0px 0px 50px;
+    font-family: "Exo 2", sans-serif;
+}
+.text p a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #01a1fd;
+    border-bottom: #01a1fd 1px solid;
+}
+.text p a img {
+    max-width: 34px;
+}
+.text a button {
+    border: none;
+    background-color: #01a1fd;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    font-family: "Exo 2", sans-serif;
+}
+.text a button:hover {
+    box-shadow: 0 0 15px #01a1fd;
+}
+.text p {
+    max-width: 500px;
+    padding: 30px 15px 30px 15px;
+    border-radius: 10px;
+    border: #01a1fd solid 0px ;
+    background-color: #e0ffff;
+}
+.ft_carro{
+    background-image: url("../../../public/Img/ft_carro_fundo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+}
+@media only screen and (max-width: 780px){
+    .ip{
+        flex-direction: column;
+    }
+    .ft_carro {
+        display: none;
+    }
+}
