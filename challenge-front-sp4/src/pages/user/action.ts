@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useRouter } from "next/router";
 
 const baseUrl = 'http://localhost:8080/ChallengeJava_war/api/rest/';
 
@@ -11,15 +10,7 @@ const requestBase = axios.create({
   },
 });
 
-function useNavigate() {
-  const router = useRouter();
-  return {
-    navigateToHome: () => router.push('/home'),
-  };
-}
-
 export async function getCarro(formData: FormData) {
-  const { navigateToHome } = useNavigate();
   const data = {
     senha: formData.get('password') as string,
     cpf: formData.get('cpf') as string,
@@ -32,7 +23,6 @@ export async function getCarro(formData: FormData) {
       return;
     }
     if (data.senha === response.data.senha) {
-      navigateToHome();
     } else {
       alert("Senha incorreta, tente novamente.");
     }
