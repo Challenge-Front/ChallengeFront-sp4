@@ -1,4 +1,5 @@
 import axios from "axios";
+import { NextRouter } from "next/router";
 
 const baseUrl = 'http://localhost:8080/ChallengeJava_war/api/rest/';
 
@@ -10,7 +11,7 @@ const requestBase = axios.create({
   },
 });
 
-export async function login(formData: FormData, router: any) {
+export async function login(formData: FormData, router: NextRouter) {
   const data = {
     senha: formData.get('password') as string,
     cpf: formData.get('cpf') as string,
@@ -32,7 +33,7 @@ export async function login(formData: FormData, router: any) {
   }
 }
 
-export async function signUp(formData: FormData, router: any) {
+export async function signUp(formData: FormData, router: NextRouter) {
   const data = {
     email: formData.get('email') as string,
     senha: formData.get('password') as string,
