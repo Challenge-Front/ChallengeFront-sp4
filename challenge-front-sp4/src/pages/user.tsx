@@ -39,4 +39,64 @@ export default function User() {
             alert("Ocorreu um erro ao enviar os dados. Tente novamente.");
         }
     };
+
+    return (
+        <>
+            <Header />
+            <main className={style.main}>
+                <div>
+                    <h1>Configure seu Perfil</h1>
+                </div>
+                <div className={style.section}>
+                    <h2 className={style.titulo}>Adicione seu veículo</h2>
+                    <label>
+                        <input
+                            type="checkbox"
+                            checked={isNewCar}
+                            onChange={() => setIsNewCar(!isNewCar)}
+                        />
+                        Alterar veículo?
+                    </label>
+                    <form onSubmit={handleCarSubmit}>
+                        <label htmlFor="marcaCarro">Marca do Veículo:</label>
+                        <input
+                            type="text"
+                            name="marcaCarro"
+                            value={formData.marcaCarro}
+                            onChange={handleInputChange}
+                        />
+                        
+                        <label htmlFor="modeloCarro">Modelo do Veículo:</label>
+                        <input
+                            type="text"
+                            name="modeloCarro"
+                            value={formData.modeloCarro}
+                            onChange={handleInputChange}
+                        />
+                        
+                        <label htmlFor="placaCarro">Placa do Veículo:</label>
+                        <input
+                            type="text"
+                            name="placaCarro"
+                            value={formData.placaCarro}
+                            onChange={handleInputChange}
+                        />
+                        
+                        <label htmlFor="anoCarro">Ano do Veículo:</label>
+                        <input
+                            type="number"
+                            name="anoCarro"
+                            value={formData.anoCarro}
+                            onChange={handleInputChange}
+                        />
+                        
+                        <button type="submit" className={style.btn}>
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </main>
+            <Footer />
+        </>
+    );
 }
