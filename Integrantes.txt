@@ -1,0 +1,7 @@
+Guilherme Alves Pedroso - RM555357
+João Victor da Silva Nascimento - RM554694
+Guilherme Felipe da Silva Souza - RM558282
+1TDSPZ 
+Link github : https://github.com/guialvesped/ChallengeFront-sp4
+Link do video: https://youtu.be/uT9b-B5Cxzk
+Link do Vercel: https://challenge-front-sp4.vercel.app/
