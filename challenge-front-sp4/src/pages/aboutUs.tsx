@@ -13,7 +13,7 @@ export default function AboutUs(){
         <main id="mainAbt">
             <h1>Sobre nós</h1>
             <div id="rep">
-                <a href="https://github.com/Challenge-Front/Challenge-Front-Semestre2" target="blank">
+                <a href="https://github.com/Challenge-Front/ChallengeFront-sp4" target="blank">
                     Acesse nosso repositório
                     <Image src={github_branco} alt=""/>
                 </a>
