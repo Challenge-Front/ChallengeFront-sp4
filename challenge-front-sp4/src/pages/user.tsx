@@ -16,28 +16,6 @@ const requestBase = axios.create({
   },
 });
 
-async function getCarro(formData: FormData) {
-  const data = {
-    senha: formData.get('password') as string,
-    cpf: formData.get('cpf') as string,
-  };
-
-  try {
-    const response = await requestBase.get(`cliente/${data.cpf}`);
-    if (response.data.cpf === null) {
-      alert("Usuário não encontrado");
-      return;
-    }
-    if (data.senha === response.data.senha) {
-    } else {
-      alert("Senha incorreta, tente novamente.");
-    }
-    return response;
-  } catch (error) {
-    console.error('Erro na requisição:', error);
-    alert("Erro na requisição");
-  }
-}
 
 async function postCarro(formData: FormData) {
   const data = {
